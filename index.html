@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Bonnes Pièces - Pièces automobiles</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="images/logo-les-bonnes-pieces-removebg-preview.png" alt="LOGO">
+      <h1>Les Bonnes Pièces</h1>
+      <div class="panier-header">
+        <span class="panier-count">{{ panier.length }}</span>
+        <span>Article{{ panier.length !== 1 ? 's' : '' }}</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="filtres">
+        <h3>Filtres</h3>
+
+        <div class="filtre-groupe">
+          <label>
+            Recherche :
+            <input type="text" v-model="recherche" placeholder="Rechercher une pièce">
+          </label>
+        </div>
+
+        <div class="filtre-groupe">
+          <label>
+            Catégorie :
+            <select v-model="categorieSelectionnee">
+              <option value="">Toutes</option>
+              <option v-for="cat in categories" :key="cat">{{ cat }}</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filtre-groupe">
+          <label>
+            Disponibilité :
+            <select v-model="disponibiliteSelectionnee">
+              <option value="">Toutes</option>
+              <option value="true">Disponible</option>
+              <option value="false">Indisponible</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="filtre-groupe">
+          <label>
+            Trier par prix :
+            <select v-model="triPrix">
+              <option value="">Aucun</option>
+              <option value="asc">Croissant</option>
+              <option value="desc">Décroissant</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="panier-info">
+          <h4>Panier: {{ panier.length }} article{{ panier.length !== 1 ? 's' : '' }}</h4>
+          <button v-if="panier.length > 0" @click="viderPanier" class="btn-vider">Vider le panier</button>
+        </div>
+      </section>
+
+      <section class="fiches">
+        <div v-if="piecesFiltrees.length === 0" class="aucun-resultat">
+          <p>Aucun produit ne correspond à vos critères de recherche.</p>
+        </div>
+        
+        <div class="fiche" v-for="piece in piecesFiltrees" :key="piece.id">
+          <div class="fiche-image">
+            <img :src="piece.image" :alt="piece.nom">
+          </div>
+          <div class="fiche-content">
+            <h3>{{ piece.nom }}</h3>
+            <p class="prix">{{ piece.prix }} €</p>
+            <p class="categorie">{{ piece.categorie }}</p>
+            <p class="disponibilite" :class="{ 'disponible': piece.disponible }">
+              {{ piece.disponible ? 'En stock' : 'Rupture de stock' }}
+            </p>
+            <button 
+              @click="ajouterAuPanier(piece)" 
+              :disabled="!piece.disponible"
+              :class="{ 'btn-disabled': !piece.disponible }">
+              {{ piece.disponible ? 'Ajouter au panier' : 'Indisponible' }}
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
