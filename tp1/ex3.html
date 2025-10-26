@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Manipulation de Vue - Couleur et Affichage</title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div id="monapp">
+  <h2>Exercice : Contrôle du paragraphe</h2>
+
+  <ul>
+    <li>
+      <b>Couleur de la police :</b><br>
+      Rouge <input type="radio" value="red" v-model="couleur">
+      <br>
+      Bleu <input type="radio" value="blue" v-model="couleur">
+    </li>
+
+    <li>
+      <b>Afficher / cacher le paragraphe ?</b>
+      <input type="checkbox" v-model="visible">
+    </li>
+  </ul>
+
+  <!-- Paragraphe contrôlé -->
+  <p v-show="visible" :style="{ color: couleur }">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Doloribus laudantium mollitia et inventore delectus. 
+    Dolorum, ipsum distinctio?
+  </p>
+
+
+</div>
+
+<script>
+const appli = {
+  data() {
+    return {
+      couleur: '',   // aucune couleur au départ
+      visible: true  // le paragraphe est affiché au départ
+    }
+  }
+};
+
+Vue.createApp(appli).mount("#monapp");
+</script>
+
+</body>
+</html>
