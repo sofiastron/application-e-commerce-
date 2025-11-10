@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav class="navbar">
-      <router-link to="/">Accueil</router-link>
-      <router-link to="/login">LOGIN</router-link>
+      <router-link to="/home">Accueil</router-link>
+      <router-link to="/">LOGIN</router-link>
     </nav>
 
     <main>

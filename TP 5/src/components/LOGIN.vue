@@ -17,7 +17,7 @@ const error = ref('')
 
 function login() {
   if (username.value.toLowerCase() === 'admin') {
-    router.push('/')
+    router.push('/home')
   } else if (username.value.toLowerCase() === 'user') {
     router.push('/user')
   } else {

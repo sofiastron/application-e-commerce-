@@ -7,11 +7,11 @@ import JobDetail from '../components/JobDetail.vue'
 import USER from '../components/USER.vue'
 import LOGIN from '../components/LOGIN.vue'
 const routes = [
-  { path: '/', component: Home },
+  { path: '/home', component: Home },
   { path: '/add', component: AddJob },
   { path: '/edit/:id', component: EditJob, props: true },
   { path: '/user', component: USER },
-   { path: '/login', component: LOGIN },
+   { path: '/', component: LOGIN },
   { path: '/job/:id', component: JobDetail, props: true }
 ]
 
