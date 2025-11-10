@@ -1,0 +1,69 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Développeur Frontend",
+      "company": "NextVision",
+      "description": "Concevoir et optimiser des interfaces modernes en Vue.js et Tailwind CSS.",
+      "salary": 9500,
+      "experience": 3
+    },
+    {
+      "id": "2",
+      "title": "Administrateur système",
+      "company": "Université Hassan II",
+      "description": "Superviser les serveurs, la sécurité réseau et la sauvegarde des données.",
+      "salary": 10000,
+      "experience": 4
+    },
+    {
+      "id": "3",
+      "title": "Designer UI/UX",
+      "company": "DesignLab Studio",
+      "description": "Créer des maquettes interactives et améliorer l’expérience utilisateur.",
+      "salary": 7800,
+      "experience": 2
+    },
+    {
+      "id": "4",
+      "title": "Développeur Backend",
+      "company": "CloudNet",
+      "description": "Développer et sécuriser des APIs REST avec Node.js et Express.",
+      "salary": 9200,
+      "experience": 3
+    },
+    {
+      "id": "5",
+      "title": "Chef de projet digital",
+      "company": "Innovatech",
+      "description": "Piloter les projets web et coordonner les équipes de développement.",
+      "salary": 11500,
+      "experience": 5
+    },
+    {
+      "id": "6",
+      "title": "Data Analyst",
+      "company": "Insight Analytics",
+      "description": "Collecter, nettoyer et visualiser les données avec Python et Power BI.",
+      "salary": 8500,
+      "experience": 3
+    },
+    {
+      "id": "7",
+      "title": "Support technique",
+      "company": "TechHelp Services",
+      "description": "Fournir une assistance technique et documenter les incidents récurrents.",
+      "salary": 6200,
+      "experience": 1
+    },
+    {
+      "id": "8",
+      "title": "Ingénieur DevOps",
+      "company": "CloudBridge",
+      "description": "Automatiser les déploiements et maintenir l’infrastructure sur AWS.",
+      "salary": 11000,
+      "experience": 4
+    }
+  ]
+}
+
