@@ -5,6 +5,7 @@
 
     <div v-else>
       <p>Bienvenue : {{ user.email }}</p>
+      
       <button @click="logoutUser">Logout</button>
     </div>
   </div>
