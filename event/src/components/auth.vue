@@ -88,6 +88,7 @@ export default {
   input, button {
     font-size: 15px;
   }
+  
 }
 
 /* Ecrans mobile */
