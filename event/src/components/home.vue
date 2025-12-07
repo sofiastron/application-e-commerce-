@@ -124,4 +124,44 @@ export default {
 button {
   margin-right: 10px;
 }
+
+/* Tablette */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  h2, h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 </style>

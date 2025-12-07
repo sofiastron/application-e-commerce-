@@ -77,4 +77,24 @@ export default {
     flex-direction: column;
     gap: 10px;
 }
+
+/* Ecrans tablette */
+@media screen and (max-width: 768px) {
+  .sofi {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  input, button {
+    font-size: 15px;
+  }
+}
+
+/* Ecrans mobile */
+@media screen and (max-width: 480px) {
+  .sofi {
+    max-width: 95%;
+    padding: 10px;
+  }
+}
 </style>
