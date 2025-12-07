@@ -3,7 +3,7 @@
      <h1>Event App</h1>
      <nav v-if="user">
       <router-link to="/home">home</router-link>
-      <router-link to="/">auth</router-link>
+      
      </nav>
      <main>
       <router-view></router-view>
@@ -29,3 +29,16 @@ export default {
   }
 };
 </script>
+<style>
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #42b983;
+}
+nav a.router-link-exact-active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+</style>
