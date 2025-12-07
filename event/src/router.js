@@ -28,15 +28,15 @@ const firebaseAuth = getAuth();
 
 router.beforeEach((to, from, next) => {
     onAuthStateChanged(firebaseAuth, (user) => {
-        // 1️⃣ Si l’utilisateur n’est pas connecté et va vers une page protégée
+
         if (to.meta.requiresAuth && !user) {
             next({ name: 'auth' });
         }
-        // 2️⃣ Si l’utilisateur est connecté et essaie d’aller au login
+       
         else if (to.name === 'auth' && user) {
             next({ name: 'home' });
         }
-        // 3️⃣ Sinon, laisser passer
+
         else {
             next();
         }

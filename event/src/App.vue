@@ -9,7 +9,7 @@
       <router-view></router-view>
      </main>
      <footer>
-       <p>&copy; 2024 Event App</p>
+       <p>&copy; 2025 Event App</p>
      </footer>
    </div>
 </template>
